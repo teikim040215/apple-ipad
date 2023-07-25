@@ -82,6 +82,16 @@ header .basket {
   right: -6px;
 }
 
+header .basket .arrow {
+  width: 20px;
+  height: 10px;
+  position: absolute;
+}
+
+header .basket .arrow::before {
+  content: "";
+}
+
 header .basket.massage {
 }
 
