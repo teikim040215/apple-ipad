@@ -1,0 +1,95 @@
+body {
+  font: size 16px;
+  line-height: 1;
+  font-family: "Roboto", "Noto Sans KR", sans-serif;
+  /* 단어 단위의 줄바꿈 */
+  word-break: keep-all;
+}
+
+/* Header */
+header {
+  background-color: #3a3a3a;
+}
+
+header .inner {
+  /* 1020px이하일 경우 화면의 너비에 맞춰지게 */
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+header ul.menu {
+  height: 44px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+header ul.menu > li {
+  display: flex;
+  /* 배치 기준 설정(basket-starter의 부모요소) */
+  position: relative;
+}
+
+header ul.menu > li > a {
+  padding: 0 10px;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  color: #f5f5f5;
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+/* 다중 선택자 */
+header ul.menu > li.apple-logo > a,
+header ul.menu > li.search-starter > a,
+header ul.menu > li.basket-starter > a {
+  width: 14px;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+  background-position: center 13px;
+}
+
+header ul.menu > li.apple-logo > a {
+  background-image: url("../images/header_apple.svg");
+}
+
+header ul.menu > li.search-starter > a {
+  background-image: url("../images/header_search.svg");
+}
+
+header ul.menu > li.basket-starter > a {
+  background-image: url("../images/header_bag.svg");
+}
+
+/* :hover -> 사용자의 커서가 요소 위에 올라가 있으면 작용함 */
+header ul.menu > li > a:hover {
+  opacity: 1;
+}
+
+/* Header/menu/basket */
+header .basket {
+  width: 290px;
+  padding: 10px 20px;
+  border: 1px solid #d2d2d2;
+  border-radius: 10px;
+  /* box-sizing -> 요소 전체 너비와 높이 게산법 설정 border-box -> 요소의 너비와 높이에 대해 지전한 값의 테두리와 안쪽 여백을 고려하도록 브라우저에 지시 */
+  box-sizing: border-box;
+  background-color: #fff;
+  /* position -> 문서 상에 요소 배치법 지정 absolute -> 부모 요소를 기준으로 배치 */
+  position: absolute;
+  /* calc -> 괄호 안의 식을 계산한 결과를 속성값으로 사용하게 해주는 함수 */
+  top: calc(100% + 4px);
+  right: -6px;
+}
+
+header .basket.massage {
+}
+
+header .basket ul {
+}
+
+header .basket ul li {
+}
+
+header .basket ul li a {
+}
