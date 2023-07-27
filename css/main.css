@@ -18,6 +18,31 @@ a {
   text-decoration: none;
   color: #1d1d1d;
 }
+/* btn -> 공통 */
+.btn {
+  display: flex;
+  /* 수평정열-센터 */
+  justify-content: center;
+  /* 수직정열-센터 */
+  align-items: center;
+  height: 24px;
+  padding: 0 10px;
+  border: none;
+  border-radius: 100px;
+  outline: none;
+  font-size: 11px;
+  line-height: 1;
+  color: #fff;
+  background-color: #0071e3;
+  cursor: pointer;
+}
+.btn:hover {
+  opacity: 0.7;
+}
+
+.btn:focus {
+  box-shadow: 0 0 0 4px #81b9f1;
+}
 /* Header */
 header {
   background-color: #3a3a3a;
@@ -97,6 +122,7 @@ header .basket {
   visibility: visible;
   transition: 0.4s;
   opacity: 0;
+  z-index: 9;
 }
 
 header .basket.show {
@@ -168,6 +194,7 @@ header .search {
   max-width: 680px;
   margin: 0 auto;
   position: relative;
+  z-index: 9;
 }
 
 header .search .shadow {
@@ -279,4 +306,55 @@ header.searching .search .autocompletes h3,
 header.searching .search .autocompletes li {
   transition-delay: 0.2s;
   transform: translate(0, 0);
+}
+
+/* 네비게이션 !! */
+nav {
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid #d2d2d2;
+  position: sticky;
+  top: 0;
+  z-index: 8;
+}
+
+nav .inner {
+  max-width: 1000px;
+  height: 52px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+nav h1 {
+  flex-grow: 1;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+nav .menu {
+  display: flex;
+  gap: 12px;
+  margin-right: 18px;
+}
+
+nav .menu li {
+}
+
+nav .menu li a {
+  display: block;
+  padding: 6px;
+  font-size: 11px;
+}
+nav .menu li:hover a {
+  color: #0071e3;
+}
+
+nav .menu li.active a {
+  opacity: 0.5;
+  cursor: default;
+}
+
+nav .menu li.active:hover a {
+  color: #1d1d1d;
 }
